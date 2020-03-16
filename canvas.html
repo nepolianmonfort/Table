@@ -1,0 +1,48 @@
+<style>
+canvas{
+width:500px;
+height:500px;
+border:1px solid black;
+}
+</style>
+<button onclick=" Rectangle(x,y,z,w)">Draw</button>
+<button onclick="left side">Shift left</button>
+<button onclick="Right side">Shift Right</button>
+<button onclick="del">Delete</button>
+
+<canvas id="rect"></canvas>
+
+<script>
+a=document.getElementById("rec");
+b=a.getcontext('2d');
+x=70px;
+y=40px;
+z=250px;
+w=100px;
+
+function Rectangle(x,y,z,w)
+{
+b.clearrect(0,0,400,400);
+b.fillstyle="blue";
+b.fillrect(x,y,z,w);
+}
+
+function left side
+{
+x--;
+Rectangle(x,y,z,w);
+}
+function Right side
+{
+x++;
+Rectangle(x,y,z,w);
+}
+function dlete side
+{
+
+c.clear Rectangle(x,y,z,w);
+}
+}
+</script>
+</body>
+

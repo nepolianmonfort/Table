@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+
+<style>
+table,th{
+border:1px solid white;
+font-family:Timesnewroman;
+font-size:20px;
+text-align:center;
+background-color:black;
+font-weight:bold;
+color:yellow;
+}
+table,td{
+border:1px solid ivory;
+
+}
+button{
+font-weight:bold;
+font-size:25px
+font-family:calibri;
+background-color:ivory;
+}
+</style>
+</head>
+
+<body>
+<table id="samptable" cellspacing="0" width="300px"    cellpadding="5px">
+<button type="button" onclick="sample()" width="100px" >Add ROW</button>
+	<tr>
+		<th>Serial Number</th>
+		<th>Action</th>
+	</tr>
+</table>
+	
+<script>
+var i=1;
+function sample()
+{
+var new= document.getElementById("samptable");
+var R= table.insertRow(-1);
+var a= R.insertCell(0);
+var b= R.insertCell(1);
+a.innerHTML=""+i++;
+b.innerHTML="<input type='button' onclick='del()' value='delete'/>";
+} 
+function del()
+{
+		
+		document.getElementById("samptable").deleteRow();
+}
+	</script>
+	</body>
+</html>
